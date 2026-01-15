@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .content-link-more {
+            display: inline-block;
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 16px;
+            border: 1px solid #007BFF;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .content-link-more:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .modal-content h2 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .modal-content p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="content-link-more" id="viewMoreBtn">View More</a>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <img src="ceo.jpg" alt="CEO Image">
+            <h2>About Our CEO</h2>
+            <p>Our CEO, John Doe, is a visionary leader with over 20 years of experience in the industry. Under his guidance, we have achieved global success.</p>
+        </div>
+    </div>
+
+    <script>
+        // Get elements
+        const viewMoreBtn = document.getElementById('viewMoreBtn');
+        const modal = document.getElementById('modal');
+        const closeModal = document.getElementById('closeModal');
+
+        // Show modal on button click
+        viewMoreBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            modal.style.display = 'flex';
+        });
+
+        // Close modal on close button click
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        // Close modal on clicking outside the content
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

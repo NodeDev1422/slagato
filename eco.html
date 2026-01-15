@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Leadership</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .scroll-container {
+            display: flex;
+            flex-direction: column;
+            animation: scroll 12s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-50%); }
+            100% { transform: translateY(0); }
+        }
+
+        .leader {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .leader img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 4px solid #007bff;
+        }
+
+        .leader-content {
+            max-width: 70%;
+        }
+
+        .leader h2 {
+            margin: 0;
+            color: #007bff;
+        }
+
+        .leader h3 {
+            margin: 5px 0;
+            color: #444;
+        }
+
+        .leader p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .container::before,
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(to bottom, rgba(245, 245, 245, 1), rgba(245, 245, 245, 0));
+            z-index: 1;
+        }
+
+        .container::before {
+            top: 0;
+        }
+
+        .container::after {
+            bottom: 0;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Slagato Technologies</h1>
+        <p>Leadership Driving Innovation and Excellence</p>
+    </header>
+
+    <!-- Leadership Section -->
+    <div class="container">
+        <div class="scroll-container">
+            <!-- Leader 1 -->
+            <div class="leader">
+                <img src="path_to_suresh_photo.jpg" alt="Gudipati Suresh Chowdary">
+                <div class="leader-content">
+                    <h2>Gudipati Suresh Chowdary</h2>
+                    <h3>Founder, Chairman, and Managing Director</h3>
+                    <p>
+                        Gudipati Suresh Chowdary is the Founder, Chairman, and Managing Director of Slagato Technologies since inception and is responsible for the overall leadership of the Company.
+                    </p>
+                    <p>
+                        As CEO, Suresh has led Slagato to surpass $1 million in annual revenue and evolve into a dynamic digital transformation partner and a strong global brand.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Leader 2 -->
+            <div class="leader">
+                <img src="path_to_lokeswari_photo.jpg" alt="Rayapati Lokeswari">
+                <div class="leader-content">
+                    <h2>Rayapati Lokeswari</h2>
+                    <h3>Co-Founder and CTO</h3>
+                    <p>
+                        Rayapati Lokeswari is the Co-Founder and CTO of SLAGATO, an artificial intelligence & Digital Technologies company enabling enterprises to create sustainable competitive advantages.
+                    </p>
+                    <p>
+                        Rayapati is renowned for her leadership in driving technology innovation and supporting initiatives for women.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

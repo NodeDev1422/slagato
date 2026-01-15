@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.intellectsoft.net	TRUE	/	FALSE	1999999999	app-net	lbftissbi6jtmr9eh6j5qhq5v9
+www.intellectsoft.net	TRUE	/	FALSE	1999999999	_csrf-app-net	%8F%8F%BB%FC1%D7%7F%E8%8C%BC-%08%92%EE%A2Aby%A2%AED%BF%86%3AV%2B%D6h%13%C8V%F1
+
